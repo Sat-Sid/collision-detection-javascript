@@ -1,0 +1,58 @@
+.container {
+    background-color: gray;
+    height: 90vh;
+    position: relative;
+}
+
+.ball {
+    background-color: blue;
+    border-radius: 50%;
+    height: 20vw;
+    width: 20vw;
+    position: absolute;
+    right: 50%;
+    top: 30%;
+
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.surface {
+    background-color: yellow;
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+
+    max-width: 80px;
+    max-height: 80px;
+    transition: background-color, border-radius 0.25s, transform 1s;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    bottom: 0;
+}
+
+.buttons :nth-child(1) {
+    grid-column-start: 2;
+}
+
+.buttons :nth-child(2) {
+    grid-column-start: 1;
+}
+
+
+.on-collide {
+    background-color: red;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    transition: transform 1s;
+}
+
